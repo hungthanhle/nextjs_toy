@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
-  max-height: 100vh;
+  min-height: 100vh;
 }
 
 .description {
@@ -108,6 +108,19 @@
 .logo {
   position: relative;
 }
+
+.imageContainer {
+  width: 100%; /* Đặt chiều rộng của container */
+  height: auto; /* Đặt chiều cao của container */
+  overflow: hidden; /* Ẩn phần của ảnh vượt qua kích thước của container */
+}
+
+.imageContainer img {
+  width: 100%; /* Ảnh sẽ có chiều rộng 100% của container */
+  height: auto; /* Chiều cao tự động được tính dựa trên tỉ lệ của ảnh */
+  display: block; /* Đảm bảo rằng ảnh là một phần tử block */
+}
+
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
