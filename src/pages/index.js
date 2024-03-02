@@ -2,6 +2,9 @@
 
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import AwesomeSlider from 'react-awesome-slider';
+import 'react-awesome-slider/dist/styles.css';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -18,24 +21,28 @@ export default function Home() {
       </header>
 
       <main className={styles.main}>
-        <div>
-          <div className={styles.imageContainer}>
-            <img src="/images/pokemon.jpg" alt="Pokemon" />
+        <AwesomeSlider>
+          <div>
+            <Link href="/pokemon">
+              <div className={styles.imageContainer}>
+                <img src="/images/pokemon.jpg" alt="Pokemon" />
+              </div>
+              <p>Mô hình Pokemon</p>
+            </Link>
           </div>
-          <p>Mô hình Pokemon</p>
-        </div>
-        <div>
-          <div className={styles.imageContainer}>
-            <img src="/images/gundam.jpg" alt="Gundam" />
+          <div>
+            <div className={styles.imageContainer}>
+              <img src="/images/gundam.jpg" alt="Gundam" />
+            </div>
+            <p>Mô hình Gundam</p>
           </div>
-          <p>Mô hình Gundam</p>
-        </div>
-        <div>
-          <div className={styles.imageContainer}>
-            <img src="/images/transformers.jpg" alt="Transformers" />
+          <div>
+            <div className={styles.imageContainer}>
+              <img src="/images/transformers.jpg" alt="Transformers" />
+            </div>
+            <p>Mô hình Robot biến hình Transformers</p>
           </div>
-          <p>Mô hình Robot biến hình Transformers</p>
-        </div>
+          </AwesomeSlider>
       </main>
 
       <footer className={styles.footer}>
